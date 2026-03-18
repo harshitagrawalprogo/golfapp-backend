@@ -48,7 +48,7 @@ app.use(errorHandler);
 
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/golf_biomechanics';
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb+srv://harshitagra700:Harshit%40123@app.xe8abd3.mongodb.net/neuroflow?retryWrites=true&w=majority&appName=APP';
 
 mongoose
   .connect(MONGO_URI)
