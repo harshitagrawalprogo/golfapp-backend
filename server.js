@@ -56,6 +56,18 @@ mongoose
     console.log('✅ MongoDB connected');
     app.listen(PORT, () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
+      
+      // Self-ping keeping Render Free Tier alive every 14 minutes
+      const LIVE_URL = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+      setInterval(async () => {
+        try {
+          const res = await fetch(`${LIVE_URL}/health`);
+          if (res.ok) console.log(`[Self-Ping] Keep-alive successful: ${new Date().toISOString()}`);
+        } catch (e) {
+          console.error(`[Self-Ping] Failed to keep alive: ${e.message}`);
+        }
+      }, 14 * 60 * 1000); // 14 mins
+
     });
   })
   .catch((err) => {
