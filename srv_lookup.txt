@@ -1,0 +1,18 @@
+Server:  dns.google
+Address:  8.8.8.8
+
+_mongodb._tcp.app.xe8abd3.mongodb.net	SRV service location:
+	  priority       = 0
+	  weight         = 0
+	  port           = 27017
+	  svr hostname   = ac-qh4b680-shard-00-02.xe8abd3.mongodb.net
+_mongodb._tcp.app.xe8abd3.mongodb.net	SRV service location:
+	  priority       = 0
+	  weight         = 0
+	  port           = 27017
+	  svr hostname   = ac-qh4b680-shard-00-00.xe8abd3.mongodb.net
+_mongodb._tcp.app.xe8abd3.mongodb.net	SRV service location:
+	  priority       = 0
+	  weight         = 0
+	  port           = 27017
+	  svr hostname   = ac-qh4b680-shard-00-01.xe8abd3.mongodb.net

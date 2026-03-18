@@ -48,7 +48,7 @@ app.use(errorHandler);
 
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGODB_URI || 'mongodb+srv://harshitagra700:Harshit%40123@app.xe8abd3.mongodb.net/neuroflow?retryWrites=true&w=majority&appName=APP';
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://harshitagra700:Harshit123@ac-l2flyum-shard-00-00.pnqtkmj.mongodb.net:27017,ac-l2flyum-shard-00-01.pnqtkmj.mongodb.net:27017,ac-l2flyum-shard-00-02.pnqtkmj.mongodb.net:27017/neuroflow?ssl=true&replicaSet=atlas-7dnl2x-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose
   .connect(MONGO_URI)
